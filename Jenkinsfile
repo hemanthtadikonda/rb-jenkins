@@ -45,7 +45,7 @@ pipeline {
    post {
       always {
          echo 'post'
-
+         echo 'poll SCM check'
       }
    }
 }
