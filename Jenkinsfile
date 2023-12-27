@@ -48,11 +48,6 @@ pipeline {
          }
       }
       stage('ping') {
-         when {
-            anyOf {
-               expression { BRANCH_NAME ==~ main }
-            }
-         }
 
          steps {
             sh 'ansible -i 172.31.20.134, localhost -m ping'
