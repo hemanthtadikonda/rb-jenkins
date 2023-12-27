@@ -1,7 +1,7 @@
 pipeline {
    agent any
    environment {
-      TEST_URL = 'clang'
+      TEST_URL = 'https://google.com'
    }
    stages {
       stage('compile') {
