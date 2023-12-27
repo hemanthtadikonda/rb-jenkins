@@ -50,7 +50,7 @@ pipeline {
       stage('ping') {
          when {
             allOf {
-               expression { env.BRANCH_NAME ==~ main }
+               expression { BRANCH_NAME ==~ main }
             }
          }
 
