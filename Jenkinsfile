@@ -32,9 +32,7 @@ pipeline {
          }
       }
       stage('test') {
-         when {
-            branch 'master'
-         }
+
          input {
             message "Should we continue?"
             ok "Yes, we should."
@@ -46,6 +44,9 @@ pipeline {
          }
       }
       stage('ping') {
+         when {
+            branch 'master'
+         }
 
          steps {
             sh 'ansible -i 172.31.20.134, localhost -m ping'
