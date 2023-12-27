@@ -25,7 +25,7 @@ pipeline {
    stages {
       stage('compile') {
          steps {
-            echo 'code compile'
+            echo 'mvn --version'
          }
       }
       stage('test') {
