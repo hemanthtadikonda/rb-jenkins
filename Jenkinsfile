@@ -31,9 +31,11 @@ pipeline {
    post {
       always {
          echo 'post'
-         //send email
-         //trigger another job
-         //update some JIRA status about build
+
       }
    }
 }
+
+         //send email
+         //trigger another job
+         //update some JIRA status about build
