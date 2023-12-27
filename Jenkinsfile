@@ -61,6 +61,7 @@ pipeline {
       always {
          echo 'post'
          echo 'poll SCM check'
+         cleanWs()
       }
    }
 }
