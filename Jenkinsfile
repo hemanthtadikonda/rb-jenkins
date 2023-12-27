@@ -8,7 +8,6 @@ pipeline {
    options {
       ansiColor('xterm')
    }
-
    parameters {
        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 
@@ -20,6 +19,9 @@ pipeline {
 
        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
    }
+
+   triggers { pollSCM('*/1 * * * *') }
+
    stages {
       stage('compile') {
          steps {
