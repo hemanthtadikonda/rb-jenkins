@@ -26,13 +26,17 @@ pipeline {
 
    stages {
       stage('compile') {
-
+         when {
+            branch 'main'
+         }
          steps {
             sh 'mvn --version'
          }
       }
       stage('test') {
-
+         when {
+            branch 'master'
+         }
          input {
             message "Should we continue?"
             ok "Yes, we should."
