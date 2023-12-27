@@ -26,17 +26,13 @@ pipeline {
 
    stages {
       stage('compile') {
-         when {
-            expression { BRANCH_NAME ==~ 'main' }
-         }
+
          steps {
             sh 'mvn --version'
          }
       }
       stage('test') {
-         when {
-            branch 'master'
-         }
+
          input {
             message "Should we continue?"
             ok "Yes, we should."
@@ -48,9 +44,7 @@ pipeline {
          }
       }
       stage('ping') {
-         when {
-            expression { BRANCH_NAME ==~ 'main' }
-         }
+
          steps {
             sh 'ansible -i 172.31.20.134, localhost -m ping'
             //sh 'ansible -i 172.31.20.134, all -e ansible_user=${SSH_USR} -e ansible_password=${SSH_PSW} -m ping'
