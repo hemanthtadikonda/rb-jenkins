@@ -27,7 +27,7 @@ pipeline {
    stages {
       stage('compile') {
          when {
-            expression { BRANCH_NAME ==~ main }
+            expression { BRANCH_NAME ==~ 'main' }
          }
          steps {
             sh 'mvn --version'
@@ -49,7 +49,7 @@ pipeline {
       }
       stage('ping') {
          when {
-            expression { BRANCH_NAME ==~ main }
+            expression { BRANCH_NAME ==~ 'main' }
          }
          steps {
             sh 'ansible -i 172.31.20.134, localhost -m ping'
