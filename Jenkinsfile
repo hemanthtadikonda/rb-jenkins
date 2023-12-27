@@ -20,7 +20,7 @@ pipeline {
    }
    post {
       always {
-         echo post
+         echo 'post'
          //send email
          //trigger another job
          //update some JIRA status about build
