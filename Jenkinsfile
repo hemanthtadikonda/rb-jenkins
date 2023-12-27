@@ -49,7 +49,7 @@ pipeline {
       }
       stage('ping') {
          when {
-            allOf {
+            anyOf {
                expression { BRANCH_NAME ==~ main }
             }
          }
