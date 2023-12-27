@@ -1,7 +1,7 @@
 pipeline {
    agent any
    environment {
-      URL = 'clang'
+      TEST_URL = 'clang'
    }
    stages {
       stage('compile') {
@@ -11,7 +11,7 @@ pipeline {
       }
       stage('test') {
          steps {
-            echo URL
+            echo TEST_URL
          }
       }
    }
