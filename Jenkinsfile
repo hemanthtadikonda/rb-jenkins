@@ -31,6 +31,10 @@ pipeline {
          }
       }
       stage('test') {
+         input {
+            message "Should we continue?"
+            ok "Yes, we should."
+         }
          steps {
             echo TEST_URL
             echo SSH
@@ -46,10 +50,6 @@ pipeline {
    }
    post {
       always {
-         input {
-            message "Should we continue?"
-            ok "Yes, we should."
-         }
          echo 'post'
          echo 'poll SCM check'
       }
