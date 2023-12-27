@@ -4,7 +4,6 @@ pipeline {
       TEST_URL = 'https://google.com'
       SSH = credentials('centos-ssh')
    }
-
    options {
       ansiColor('xterm')
    }
@@ -19,8 +18,11 @@ pipeline {
 
        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
    }
-
    triggers { pollSCM('*/1 * * * *') }
+
+   tools {
+      maven 'maven'
+   }
 
    stages {
       stage('compile') {
