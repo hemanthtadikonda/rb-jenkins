@@ -46,6 +46,10 @@ pipeline {
    }
    post {
       always {
+         input {
+            message "Should we continue?"
+            ok "Yes, we should."
+         }
          echo 'post'
          echo 'poll SCM check'
       }
