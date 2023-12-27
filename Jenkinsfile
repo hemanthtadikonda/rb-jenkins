@@ -1,12 +1,12 @@
 pipeline {
    agent any
-   options {
-      ansiColor('xterm')
-   }
-
    environment {
       TEST_URL = 'https://google.com'
       SSH = credentials('centos-ssh')
+   }
+
+   options {
+      ansiColor('xterm')
    }
    stages {
       stage('compile') {
