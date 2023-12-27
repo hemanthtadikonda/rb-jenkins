@@ -26,9 +26,7 @@ pipeline {
 
    stages {
       stage('compile') {
-         when {
-            branch 'main'
-         }
+
          steps {
             sh 'mvn --version'
          }
