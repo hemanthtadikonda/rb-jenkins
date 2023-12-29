@@ -1,0 +1,9 @@
+- name: crete Jenkins Jobs
+  host: localhost
+  roles:
+     - jenkins
+
+  vars:
+     - folders:
+          - { folder_name = "CI-Pipelines"}
+          - { folder_name = "Deployment jobs"}
