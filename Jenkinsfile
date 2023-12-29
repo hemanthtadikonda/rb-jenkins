@@ -1,4 +1,5 @@
 node {
+   def x =10
    stage('one') {
       sh 'echo one'
    }
@@ -7,6 +8,7 @@ node {
    }
    stage('three') {
       sh 'echo three'
+      print x
    }
 }
 
