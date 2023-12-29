@@ -1,5 +1,5 @@
 - name: crete Jenkins Jobs
-  host: localhost
+  hosts: localhost
   roles:
      - jenkins
 
