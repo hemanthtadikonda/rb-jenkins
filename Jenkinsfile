@@ -12,7 +12,7 @@ node {
          sh "echo y - ${y}"
          print y
       }
-   }else if (y > 25 ) {
+   }elseif (x > 25 ) {
       stage('four') {
          samplefun()
       }
