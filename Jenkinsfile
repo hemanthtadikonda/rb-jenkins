@@ -5,6 +5,7 @@ node {
    stage('one') {
       sh 'echo one'
       sh "echo y - ${y}"
+      print y
    }
    stage('two') {
       sh 'echo two'
