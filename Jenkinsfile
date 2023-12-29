@@ -8,7 +8,7 @@ node {
    }
    stage('two') {
       sh 'echo two'
-      sh 'echo y value is ${y}'
+      sh "echo y value is ${y}"
    }
    stage('three') {
       sh 'echo three'
