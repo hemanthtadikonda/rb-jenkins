@@ -6,22 +6,16 @@ def samplefun(){
 }
 
 node {
-   stage('one') {
-      sh 'echo one'
-      sh "echo y - ${y}"
-      print y
-   }
-   stage('two') {
-      sh 'echo two'
-      sh "echo y value is ${y}"
-   }
-   stage('three') {
-      sh 'echo three'
-      print x
-      samplefun()
-   }
-   stage('four') {
-      samplefun()
+   if ( x > 10 ) {
+      stage('one') {
+         sh 'echo one'
+         sh "echo y - ${y}"
+         print y
+      }
+   }else {
+      stage('four') {
+         samplefun()
+      }
    }
 }
 
