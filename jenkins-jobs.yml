@@ -13,3 +13,4 @@
 
      mjobs:
         - { job_name: "cart" , repo_name: "https://github.com/hemanthtadikonda/cart.git" , folder_name: "CI-Pipelines"}
+        - { job_name: "user" , repo_name: "https://github.com/hemanthtadikonda/user.git" , folder_name: "CI-Pipelines"}
