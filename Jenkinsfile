@@ -1,5 +1,9 @@
 def x =10
 env.y = 20
+def samplefunction(){
+   print "Hello World"
+   print "Welcome"
+}
 
 node {
    stage('one') {
@@ -14,6 +18,9 @@ node {
    stage('three') {
       sh 'echo three'
       print x
+   }
+   stage('four') {
+         samplefuntion()
    }
 }
 
