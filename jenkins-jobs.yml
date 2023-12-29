@@ -3,13 +3,13 @@
   roles:
      - jenkins
 
-  vars:
-     folders:
-        - { folder_name: "CI-Pipelines" }
-        - { folder_name: "Infra-Jobs" }
-        - { folder_name: "Deployment-Jobs" }
-
 #  vars:
 #     folders:
-#        - { folder_name = "CI-Pipelines"}
-#        - { folder_name = "Deployment jobs"}
+#        - { folder_name: "CI-Pipelines" }
+#        - { folder_name: "Infra-Jobs" }
+#        - { folder_name: "Deployment-Jobs" }
+
+  vars:
+     folders:
+        - { folder_name = "CI-Pipelines" }
+        - { folder_name = "Deployment jobs" }
