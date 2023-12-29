@@ -1,6 +1,12 @@
 node {
-   def x:integer = 10
-   stage('one'){
-      print x
+   stage('one') {
+      sh 'echo one'
+   }
+   stage('two') {
+      sh 'echo two'
+   }
+   stage('three') {
+      sh 'echo three'
    }
 }
+
