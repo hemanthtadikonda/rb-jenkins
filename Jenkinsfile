@@ -1,4 +1,5 @@
 def x =10
+def z =19
 env.y = 20
 def samplefun(){
    print "Hello World"
@@ -12,7 +13,7 @@ node {
          sh "echo y - ${y}"
          print y
       }
-   }elseif (x > 25 ) {
+   }else if (z > 25 ) {
       stage('four') {
          samplefun()
       }
