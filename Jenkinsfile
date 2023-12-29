@@ -1,5 +1,5 @@
 node {
-   def x =10
+   def x:integer =10
    stage('one') {
       sh 'echo one'
    }
