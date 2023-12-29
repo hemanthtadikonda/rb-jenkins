@@ -3,13 +3,13 @@
   roles:
      - jenkins
 
-#  vars:
-#     folders:
-#        - { folder_name: "CI-Pipelines" }
-#        - { folder_name: "Infra-Jobs" }
-#        - { folder_name: "Deployment-Jobs" }
-
   vars:
      folders:
         - { folder_name: "CI-Pipelines" }
         - { folder_name: "Deployment jobs" }
+
+     sjobs:
+        - { job_name: "rb-terraform" , repo_name: "https://github.com/hemanthtadikonda/rb-terraform.git" , folder_name: "Deployment jobs"}
+
+     mjobs:
+        - { job_name: "cart" , repo_name: "https://github.com/hemanthtadikonda/cart.git" , folder_name: "CI-Pipelines"}
