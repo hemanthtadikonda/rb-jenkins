@@ -4,6 +4,6 @@
      - jenkins
 
   vars:
-     - folders:
-          - { folder_name = "CI-Pipelines"}
-          - { folder_name = "Deployment jobs"}
+     folders:
+        - { folder_name = "CI-Pipelines"}
+        - { folder_name = "Deployment jobs"}
