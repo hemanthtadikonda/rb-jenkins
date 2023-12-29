@@ -20,7 +20,7 @@ node {
       print x
    }
    stage('four') {
-         samplefuntion()
+      samplefuntion()
    }
 }
 
