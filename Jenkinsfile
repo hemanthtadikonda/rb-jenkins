@@ -1,6 +1,7 @@
+def x =10
+env.y = 20
+
 node {
-   def x =10
-   env.y = 20
    stage('one') {
       sh 'echo one'
       sh 'echo y - ${y}'
