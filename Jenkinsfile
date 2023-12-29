@@ -4,7 +4,7 @@ env.y = 20
 node {
    stage('one') {
       sh 'echo one'
-      sh 'echo y - ${y}'
+      sh "echo y - ${y}"
    }
    stage('two') {
       sh 'echo two'
