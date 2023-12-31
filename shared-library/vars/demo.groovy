@@ -15,7 +15,7 @@ def call() {
                echo 'Hello World'
             }
          }
-         stage('Test'){
+         stage('Test code'){
             steps {
                echo 'Hello World'
             }
