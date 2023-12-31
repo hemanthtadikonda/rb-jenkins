@@ -12,5 +12,5 @@
         - { job_name: "rb-terraform" , repo_name: "https://github.com/hemanthtadikonda/rb-terraform.git" , folder_name: "Deployment jobs"}
 
      mjobs:
-        - { job_name: "cart" , repo_name: "https://github.com/hemanthtadikonda/cart.git" , folder_name: "CI-Pipelines"}
-        - { job_name: "user" , repo_name: "https://github.com/hemanthtadikonda/user.git" , folder_name: "CI-Pipelines"}
+        - { job_name: "cart" , repo_name: "https://github.com/hemanthtadikonda/cart-v1.git" , folder_name: "CI-Pipelines"}
+        - { job_name: "user" , repo_name: "https://github.com/hemanthtadikonda/user-v1.git" , folder_name: "CI-Pipelines"}
