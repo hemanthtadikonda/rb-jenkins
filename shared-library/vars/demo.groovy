@@ -13,6 +13,10 @@ def call() {
          stage('Code compile'){
             steps {
                echo 'Hello World'
+               script {
+                  info 'Starting'
+                  warning 'Nothing to do!'
+               }
             }
          }
          stage('Code Test'){
