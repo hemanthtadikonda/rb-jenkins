@@ -10,12 +10,12 @@ def call() {
    pipeline {
       agent any
       stages {
-         stage('compile code'){
+         stage('Code compile'){
             steps {
                echo 'Hello World'
             }
          }
-         stage('Test code'){
+         stage('Code Test'){
             steps {
                echo 'Hello World'
             }
