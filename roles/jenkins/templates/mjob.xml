@@ -22,11 +22,12 @@
         <data>
             <jenkins.branch.BranchSource>
                 <source class="jenkins.plugins.git.GitSCMSource" plugin="git@5.2.1">
-                    <id>122cbea3-9310-4c69-88e4-0f05b6327ff9</id>
-                    <remote>https://github.com/{{ item.repo_name }}</remote>
+                    <id>2075b250-4663-4101-b2f8-8888e56cad08</id>
+                    <remote>{{ item.repo_name }}</remote>
                     <credentialsId></credentialsId>
                     <traits>
                         <jenkins.plugins.git.traits.BranchDiscoveryTrait/>
+                        <jenkins.plugins.git.traits.TagDiscoveryTrait/>
                     </traits>
                 </source>
                 <strategy class="jenkins.branch.DefaultBranchPropertyStrategy">
