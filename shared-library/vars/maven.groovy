@@ -12,7 +12,7 @@ def call() {
             when {
                allOf {
                   expression  { env.BRANCH_NAME ==~ ".*" }
-                  expression  { env.TAG_NAME    ==~ null }
+                  expression  { env.TAG_NAME    == null }
                }
             }
             steps {
