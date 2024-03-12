@@ -11,8 +11,8 @@ def call() {
          stage('code Test'){
             when {
                allOf {
-                  expression { BRANCH_NAME ==~ ".*" }
-                  expression { TAG_NAME ==~ null }
+                  expression { env.BRANCH_NAME ==~ ".*" }
+                  expression { env.TAG_NAME ==~ null }
                }
             }
             steps{
