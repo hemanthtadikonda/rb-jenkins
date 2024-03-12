@@ -4,7 +4,7 @@ def call() {
       stages {
          stage('code Complie') {
             steps {
-               sh 'find .'
+               sh 'find env'
                sh 'echo npm install'
             }
          }
