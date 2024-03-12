@@ -11,8 +11,8 @@ def call() {
          stage('code Test') {
             when {
                allOf {
-                  expression  { BRANCH_NAME ==~ ".*" }
-                  expression  { TAG_NAME    ==~ null }
+                  expression  { env.BRANCH_NAME ==~ ".*" }
+                  expression  { env.TAG_NAME    ==~ null }
                }
             }
             steps {
@@ -21,7 +21,7 @@ def call() {
          }
          stage('code quality') {
             when {
-               expression  { BRANCH_NAME ==~ "main" }
+               expression  { env.BRANCH_NAME ==~ "main" }
             }
             steps {
                sh 'echo code quality'
@@ -29,7 +29,7 @@ def call() {
          }
          stage('code security') {
             when {
-               expression  { BRANCH_NAME ==~ "main" }
+               expression  { env.BRANCH_NAME ==~ "main" }
             }
             steps {
                sh 'echo code security'
@@ -37,7 +37,7 @@ def call() {
          }
          stage('code Release') {
             when {
-               expression  { TAG_NAME ==~ "main" }
+               expression  { env.TAG_NAME ==~ ".*" }
             }
             steps {
                sh 'echo code release'
