@@ -9,6 +9,12 @@ def call() {
             }
          }
          stage('code Test'){
+            when {
+               allOf {
+                  expression ( BRANCH_NAME ==~ ".*")
+                  expression ( TAG_NAME !=~ null )
+               }
+            }
             steps{
                sh 'echo code test'
             }
