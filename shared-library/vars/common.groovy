@@ -1,7 +1,8 @@
 def compile() {
    stage('code complie'){
       if (env.codeType == "maven"){
-         print 'maven'
+         //print 'maven'
+         sh 'mvn package'
       }
       if (env.codeType == "nodejs"){
          print 'nodejs'
