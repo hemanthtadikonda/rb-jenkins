@@ -34,7 +34,11 @@ def test(){
 
 def codeQuality(){
    stage('code quality'){
-      print 'codeQuality'
+      if (env.codeType == "maven"){
+         sh 'sonar-scanner -Dsonar.host.url=http://172.31.38.221:9000 -Dsonar.login=admin -Dsonar.password=admin123 -Dsonar.projectKey=${component} -Dsonar.qualitygate.wait=true -Dsonar.java.binaries=./target'
+      } else {
+         sh 'sonar-scanner -Dsonar.host.url=http://172.31.38.221:9000 -Dsonar.login=admin -Dsonar.password=admin123 -Dsonar.projectKey=${component} -Dsonar.qualitygate.wait=true'
+      }
    }
 }
 
