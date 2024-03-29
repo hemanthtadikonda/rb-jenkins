@@ -5,7 +5,8 @@ def compile() {
          sh 'mvn package'
       }
       if (env.codeType == "nodejs"){
-         print 'nodejs'
+         //print 'npm install'
+         sh 'npm install'
       }
       if (env.codeType == "python"){
          print 'python'
