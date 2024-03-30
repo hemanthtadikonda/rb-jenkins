@@ -2,7 +2,7 @@ def compile() {
    stage('code complie'){
       if (env.codeType == "maven"){
          //print 'maven'
-         sh '/home/centos/maven/bin/mvn package'
+         sh 'sudo /home/centos/maven/bin/mvn package'
       }
       if (env.codeType == "nodejs"){
          //print 'npm install'
