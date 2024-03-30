@@ -56,9 +56,9 @@ def release(){
    stage('release'){
       sh 'echo ${TAG_NAME} >VERSION'
       if (env.codeType == "nodejs"){
-         sh 'zip -r ${component}-{TAG_NAME}.zip server.js node_modules VERSION ${schema_dir}'
+         sh 'zip -r ${component}-${TAG_NAME}.zip server.js node_modules VERSION ${schema_dir}'
       }else if (env.codeType == "maven"){
-         sh 'cp target/${component}-1.0.jar ${component}.jar ; zip -r ${component}-{TAG_NAME}.zip ${component}.jar VERSION ${schema_dir}'
+         sh 'cp target/${component}-1.0.jar ${component}.jar ; zip -r ${component}-${TAG_NAME}.zip ${component}.jar VERSION ${schema_dir}'
       } else {
          sh 'zip -r ${component}-${TAG_NAME}.zip *'
          sh 'ls'
