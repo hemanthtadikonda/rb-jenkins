@@ -61,6 +61,7 @@ def release(){
          sh 'cp target/${component}-1.0.jar ${component}.jar ; zip -r ${component}-{TAG_NAME}.zip ${component}.jar VERSION ${schema_dir}'
       } else {
          sh 'zip -r ${component}-{TAG_NAME}.zip *'
+         sh 'ls'
       }
       sh 'curl -v -u admin:admin123 --upload-file ${component}-${TAG_NAME}.zip http://172.31.37.183:8081/repository/${component}/${component}-${TAG_NAME}.zip'
    }
