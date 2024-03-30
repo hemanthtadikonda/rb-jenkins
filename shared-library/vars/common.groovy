@@ -62,6 +62,6 @@ def release(){
       } else {
          sh 'zip -r ${component}-{TAG_NAME}.zip *'
       }
-      sh 'curl -v -u admin:admin123 --upload-file ${component}-${TAG_NAME}.zip http://172.31.32.124:8081/repository/${component}/${component}-${TAG_NAME}.zip'
+      sh 'curl -v -u admin:admin123 --upload-file ${component}-${TAG_NAME}.zip http://172.31.37.183:8081/repository/${component}/${component}-${TAG_NAME}.zip'
    }
 }
