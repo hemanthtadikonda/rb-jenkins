@@ -2,12 +2,7 @@ def call() {
    pipeline {
       agent any
       stages {
-         stage('code compile'){
-            steps {
-               sh 'env'
-               sh 'echo python code do not required'
-            }
-         }
+
          stage('code Test'){
             when {
                allOf{
@@ -21,9 +16,13 @@ def call() {
          }
          stage('code Quality'){
             when {
-               expression { env.BRANCH_NAME ==~ "main"}
+               allOf{
+                  expression { env.BRANCH_NAME ==~ ".*"}
+                  expression { env.TAG_NAME  == null   }
+               }
             }
             steps {
+               //sh 'sonar-scanner -Dsonar.host.url=http://172.31.38.221:9000 -Dsonar.login=admin -Dsonar.password=admin123 -Dsonar.projectKey=${component} -Dsonar.qualitygate.wait=true'
                sh 'echo sonar code security'
             }
          }
