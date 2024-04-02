@@ -6,7 +6,7 @@ def call() {
          stage('code complie') {
             steps {
                sh "export PATH=/opt/maven/bin:$PATH"
-               sh 'mvn clean package'
+               sh '/opt/maven/bin/mvn clean package'
             }
          }
          stage('code Test') {
