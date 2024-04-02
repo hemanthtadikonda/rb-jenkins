@@ -3,7 +3,7 @@ def compile() {
       if (env.codeType == "maven") {
          //sh 'mvn package'
          //sh '/home/centos/maven/bin/mvn -version'
-         sh '/home/centos/maven/bin/mvn package'
+         sh '/root/maven/bin/mvn package'
          //print 'maven'
       }
       if (env.codeType == "nodejs"){
