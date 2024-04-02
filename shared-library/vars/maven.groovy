@@ -6,7 +6,7 @@ def call() {
          stage('code complie') {
             steps {
                //sh "export PATH=/opt/maven/bin:$PATH"
-               sh 'sudo /opt/maven/bin/mvn package'
+               sh 'sudo /home/centos/maven/bin/mvn package'
             }
          }
          stage('code Test') {
@@ -52,3 +52,20 @@ def call() {
       }
    }
 }
+
+
+
+
+/// /etc/ssh ]# visudo
+//## Allow root to run any commands anywhere
+//root    ALL=(ALL)       ALL
+//jenkins ALL=(ALL)       NOPASSWD: ALL
+//## Allows members of the 'sys' group to run networking, software,
+//## service management apps and more.
+//# %sys ALL = NETWORKING, SOFTWARE, SERVICES, STORAGE, DELEGATING, PROCESSES, LOCATE, DRIVERS
+//
+//## Allows people in group wheel to run all commands
+//# %wheel        ALL=(ALL)       ALL
+//
+//## Same thing without a password
+//# %wheel        ALL=(ALL)       NOPASSWD: ALL
