@@ -5,7 +5,7 @@ def call() {
 
          stage('code complie') {
             steps {
-               sh 'echo code compile'
+               sh '/home/centos/maven/bin/mvn package'
             }
          }
          stage('code Test') {
@@ -44,7 +44,8 @@ def call() {
                expression  { env.TAG_NAME ==~ ".*" }
             }
             steps {
-               sh 'echo code release'
+               sh 'echo ${TAG_NAME} >VERSION'
+               sh 'cp target/${component}-1.0.jar ${component}.jar ; zip -r ${component}-${TAG_NAME}.zip ${component}.jar VERSION ${schema_dir}'
             }
          }
       }
