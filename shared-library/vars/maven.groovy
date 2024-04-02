@@ -5,7 +5,8 @@ def call() {
 
          stage('code complie') {
             steps {
-               sh 'sudo /home/centos/maven/bin/mvn clean package'
+               sh "export PATH=/opt/maven/bin:$PATH"
+               sh 'mvn clean package'
             }
          }
          stage('code Test') {
